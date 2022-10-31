@@ -7,10 +7,17 @@ class TileState(Enum):
 
 class Tile:
     def __init__(self, state: TileState) -> None:
-        self._state = state
+        self.state = state
     
     def played(self) -> bool:
-        return self._state == TileState.PLAYER_1 or self.state == TileState.PLAYER_2
+        return self.state == TileState.PLAYER_1 or self.state == TileState.PLAYER_2
 
-    def get_state(self) -> TileState:
-        return self._state
+    def __eq__(self, other) -> bool:
+        return self.state == other.state
+    
+    def __str__(self) -> str:
+        if (self.state == TileState.PLAYER_1):
+            return "O"
+        if (self.state == TileState.PLAYER_2):
+            return "X"
+        return "-"
