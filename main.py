@@ -22,11 +22,10 @@ def main():
                 board_num = int(inp1)
                 tile_num = int(inp2)
                 g.play_turn(current_player, board_num=board_num, tile_num=tile_num)
+                g.update_win_state()
                 current_player = switch_turn(current_player)
-        print(g._win_state)
-        print(g.is_won())
         print(g)
-    print(g.get_win_state().name + "has won the game!")
+    print(g.get_win_state().name + " has won the game!")
 
 
 def switch_turn(player: State) -> State:
