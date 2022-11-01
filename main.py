@@ -1,5 +1,6 @@
-from board.board import Board, WinState
-from board.tile import Tile, TileState
+from game.board import Board, BoardWinState
+from game.tile import Tile, TileState
+from game.metagame import MetaBoard, MetaWinState
 
-b = Board(0)
+b = MetaBoard()
 print(b)
