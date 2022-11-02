@@ -5,7 +5,13 @@ from game.metagame import MetaBoard
 from game.state import State
 
 def main():
-    print("Welcome to Tic Tac Toe Squared!")
+    welcome_message = """Welcome to Tic Tac Toe Squared! The rules of the game are simple.
+    There are 9 Tic-Tac-Toe boards arranged into 3 columns and 3 rows. Each turn, a player may make a single move in any one of the 9 game instances.
+    Every time a player wins one of the game instances, they claim that corresponding tile in the meta-game. The game ends when a player wins the meta-game.
+
+    Please note that the boards and tiles are numbered from 0 through 8.
+    """
+    print(welcome_message)
     g = MetaBoard()
     print("Here is what the board looks like: \n")
     print(g)
@@ -25,7 +31,7 @@ def main():
                 g.update_win_state()
                 current_player = switch_turn(current_player)
         print(g)
-    print(g.get_win_state().name + " has won the game!")
+    print("Congratulations! " + g.get_win_state().name + " has won the game!")
 
 
 def switch_turn(player: State) -> State:
