@@ -6,4 +6,4 @@ Every time a player wins one of the game instances, they claim that correspondin
 
 Please note that the boards and tiles are numbered from 0 through 8.
 
-In order to play, use the command line to navigate to the folder that "main.py" is located. Then run "python main.py". Make sure you have python installed.
+In order to play, clone this repository and use the command line to navigate to the folder that "main.py" is located in. Then run "python main.py". Make sure you have python installed.
